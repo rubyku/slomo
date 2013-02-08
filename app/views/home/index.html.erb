@@ -1,0 +1,195 @@
+<style type="text/css">
+  body {
+    background-color: black;
+    font-family: helvetica;
+  }
+
+  .hero-image {
+    background-image: url(<%= asset_path 'hero.jpg' %>);
+    height: 658px;
+    margin-top: -250px
+  }
+
+  .menu{
+    margin-left: 200px;
+    z-index: 1000;
+    margin-top: 50px;
+  }
+
+  .modal{
+    background-color: black;
+    color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+  }
+</style>
+
+
+<div class="menu">
+  <%= link_to (image_tag 'menu-slomo.png', :style => "margin-bottom: 30px"), root_path %><br>
+  <%= link_to (image_tag 'menu-trailer.png', :style => "margin-bottom: 10px"), '#trailer', "data-toggle" => "modal", :id => "trailer-link"  %><%= link_to (image_tag 'icon-video.png', :style => "margin-top: -10px; margin-left: 10px"), '#trailer', "data-toggle" => "modal", :id => "trailer-link2" %>
+  <br>
+  <%= link_to (image_tag 'menu-about.png', :style => "margin-bottom: 10px"), '#about', "data-toggle" => "modal", :id => "modal-link" %><br>
+  <%= link_to (image_tag 'menu-contact.png', :style => "margin-bottom: 10px"), "mailto:joshuaizenberg@gmail.com" %><br>
+</div>
+
+<div class="hero-image"></div>
+
+<div class="row-fluid" style="margin: 30px 0; width: 600;">
+<center>
+  <%= link_to (image_tag 'award-bigsky.jpg', :style => "margin-right: 40px; margin-left: -38px"), "http://www.bigskyfilmfest.org/", :target => "_blank" %>
+  <%= link_to (image_tag 'award-sxsw.jpg', :size => "170x150", :style => "margin-right: 33px; margin-left: 30px, margin-top: -30px"), "http://sxsw.com/film", :target => "_blank" %>
+  <%= link_to (image_tag 'award-truefalse.jpg', :size => "150x75"), "http://truefalse.org/", :target => "_blank" %>
+
+  <p style="margin-top: 60px">Copyright 2013<br>
+  All Rights Reserved</p>
+</center>
+</div>
+
+<!-- about modal -->
+<div id="about" class="modal hide">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel"><%= image_tag 'menu-about.png' %></h3>
+  </div>
+  <div class="modal-body">
+    <h4>Synopsis</h4>
+    <p>Depressed and frustrated with his life, Dr. John Kitchin abandons his career as a neurologist and moves to Pacific Beach. There, he undergoes a radical transformation into SLOMO, trading his lab coat for a pair of rollerblades and his IRA for a taste of divinity.</p><br>
+
+    <h4>Filmmaker Bios</h4>
+    <p><strong>Josh Izenberg: Director/Producer</strong></p>
+    <p>Josh Izenberg hails from Ann Arbor, where he earned a degree in Screenwriting from the University of Michigan. He's since worked as a copywriter, a cab driver, and a carpenter. SLOMO is his first documentary.</p>
+    <br>
+    <p><strong>Amanda Micheli: Producer</strong></p>
+    <p>Amanda is an Oscar-nominated director and a celebrated cinematographer. Most recently, she directed THE SAVE for ESPN and ONE NATION UNDER DOG for HBO, which premiered at Tribeca in 2012.</p>
+    <br>
+    <p><strong>Traci Loth: Editor</strong></p>
+    <p>Traci Loth is a San Francisco-based editor with over a decade of experience in documentary and commercial work, both for television and film. She cut the award-winning documentary Row Hard, No Excuses—about two Americans rowing the world's toughest race across the Atlantic. Most recently, she edited for the Aerial America series on Smithsonian Channel.</p>
+    <br>
+    <p><strong>Wynn Padula: Cinematographer/Co-Producer</strong></p>
+    <p>Wynn has shot and directed many festival-winning films including "The Breeze Team" (2nd Place winner, Canadian International Film Festival), "Rainbow Klansmen" (Mill Valley Film Festival), "Felicia's House" and "Lynx" (Best Short Film, Wild & Scenic Film Festival). Wynn also worked in film development under the legendary producer Roger Corman and again for the Space Program production company at Universal Studios.</p>
+    <br>
+    <h4>Full Credits</h4>
+
+    THE FILMMAKERS ARE GRATEFUL TO<br>
+    John Kitchin<br>
+    Dominick Addario<br>
+    Brenda West-Newman<br>
+    Dr. Leslie Preger<br>
+    Maris Curran<br>
+    the Izenberg family<br>
+    <br>
+    EXECUTIVE PRODUCER<br>
+    Neil Izenberg<br>
+    <br>
+    CO-PRODUCER<br>
+    Wynn Padula<br>
+    <br>
+    ADDITIONAL CAMERA<br>
+    Michael Sly and John Jenkins<br>
+    <br>
+    ANIMATION<br>
+    Alligator Planet, LLC<br>
+    Animator: Eli Noyes<br>
+    Producer: Ralph Guggenheim<br>
+    <br>
+    SOUND DESIGN & MIX<br>
+    Jeremiah Moore<br>
+    <br>
+    DIALOGUE EDITOR<br>
+    Max Hirtenstein<br>
+    <br>
+    COLOR CORRECTION<br>
+    Robert Arnold<br>
+    <br>
+    PRODUCTION ASSISTANT<br>
+    Sophie Fried<br>
+    <br>
+    SPECIAL THANKS<br>
+    Steve Agnos<br>
+    Josh Anand<br>
+    Chris Barngrover<br>
+    Sarah Bertram<br>
+    Owen Bissell<br>
+    Meryl Marshall-Daniels<br>
+    Bubba Dialhouse<br>
+    Andrzej Dolata<br>
+    Henry Dombey<br>
+    Claudia Fieger<br>
+    Sally Foster<br>
+    Roger and Cheri Friedman<br>
+    Todd Gudat<br>
+    Dante harper<br>
+    Mark Hassett<br>
+    Rachel Jacobs<br>
+    Alexis Johansen-williams<br>
+    Ruby Ku<br>
+    Corine Masri<br>
+    Greg Matthews<br>
+    Sarah Nelson<br>
+    Fred Padula<br>
+    Alex Pappas<br>
+    Vincent Paratore<br>
+    David Roth<br>
+    Russell Ramo<br>
+    Sally Sanfield<br>
+    Eric Shank<br>
+    The Sievings<br>
+    The Sloans<br>
+    Scott Stillman<br>
+    Carey Tanner<br>
+    Adi Tzur<br>
+    Daniel Versman<br>
+    Meredith Whipple<br>
+    Jack Wickert<br>
+    Jude Wilson<br>
+    Alisa Wittkop<br>
+    <br>
+    KU TAND0<br>
+    Written and Performed by Bonga<br>
+    Courtesy of Lusafrica Records<br>
+    By Arrangement with François Post<br>
+    <br>
+    <br>
+    <h4>CONTACT US</h4>
+    Josh Izenberg: Director/Publicity<br>
+    Big Young Films<br>
+    711 Hampshire<br>
+    San Francisco, CA<br>
+    94110<br>
+    <br>
+    (734) 904-1857<br>
+    joshuaizenberg@gmail.com<br>
+    www.bigyoungfilms.com<br>
+    <br>
+    <h4>PRESS</h4>
+    NONE YET
+  </div>
+</div>
+
+<!-- trailer modal -->
+<div id="trailer" class="modal hide">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel"><%= image_tag 'menu-trailer.png' %></h3>
+  </div>
+  <div class="modal-body">
+    <center>
+      <iframe width="480" height="360" src="http://www.kickstarter.com/projects/938605972/i-slomo/widget/video.html" frameborder="0"> </iframe>
+    </center>
+  </div>
+</div>
+
+<%= content_for :js do %>
+  <script type="text/javascript">
+    $("#modal-link").on('click', function() {
+      $("#about").modal('show');
+    });
+    $("#trailer-link").on('click', function() {
+      $("#trailer").modal('show');
+    });
+    $("#trailer-link2").on('click', function() {
+      $("#trailer").modal('show');
+    });
+  </script>
+<% end %>
