@@ -22,6 +22,14 @@
     border: 1px solid #ccc;
     border-radius: 0px;
   }
+
+  .about-tab{
+    background-color: #ccc;
+    padding: 5px;
+    margin-right: 5px;
+    float: left;
+  }
+
 </style>
 
 
@@ -53,133 +61,149 @@
     <h3 id="myModalLabel"><%= image_tag 'menu-about.png' %></h3>
   </div>
   <div class="modal-body">
-    <h4>Synopsis</h4>
-    <p>Depressed and frustrated with his life, Dr. John Kitchin abandons his career as a neurologist and moves to Pacific Beach. There, he undergoes a radical transformation into SLOMO, trading his lab coat for a pair of rollerblades and his IRA for a taste of divinity.</p><br>
+    <div style="float:left; width: 550px; margin-bottom: 20px">
+      <a href="#" id="syopsis-link"><div class="about-tab">Synopsis</div></a>
+      <a href="#" id="bios-link"><div class="about-tab">Filmmaker Bios</div></a>
+      <a href="#" id="credits-link"><div class="about-tab">Full Credits</div></a>
+      <a href="#" id="contact-link"><div class="about-tab">Contact us</div></a>
+      <a href="#" id="press-link"><div class="about-tab">Press</div></a>
+    </div>
 
-    <h4>Filmmaker Bios</h4>
-    <p><strong>Josh Izenberg: Director/Producer</strong></p>
-    <p>Josh Izenberg hails from Ann Arbor, where he earned a degree in Screenwriting from the University of Michigan. He's since worked as a copywriter, a cab driver, and a carpenter. SLOMO is his first documentary.</p>
-    <br>
-    <p><strong>Amanda Micheli: Producer</strong></p>
-    <p>Amanda is an Oscar-nominated director and a celebrated cinematographer. Most recently, she directed THE SAVE for ESPN and ONE NATION UNDER DOG for HBO, which premiered at Tribeca in 2012.</p>
-    <br>
-    <p><strong>Traci Loth: Editor</strong></p>
-    <p>Traci Loth is a San Francisco-based editor with over a decade of experience in documentary and commercial work, both for television and film. She cut the award-winning documentary Row Hard, No Excuses—about two Americans rowing the world's toughest race across the Atlantic. Most recently, she edited for the Aerial America series on Smithsonian Channel.</p>
-    <br>
-    <p><strong>Wynn Padula: Cinematographer/Co-Producer</strong></p>
-    <p>Wynn has shot and directed many festival-winning films including "The Breeze Team" (2nd Place winner, Canadian International Film Festival), "Rainbow Klansmen" (Mill Valley Film Festival), "Felicia's House" and "Lynx" (Best Short Film, Wild & Scenic Film Festival). Wynn also worked in film development under the legendary producer Roger Corman and again for the Space Program production company at Universal Studios.</p>
-    <br>
-    <h4>Full Credits</h4>
+    <div id="synopsis">
+      <p>Depressed and frustrated with his life, Dr. John Kitchin abandons his career as a neurologist and moves to Pacific Beach. There, he undergoes a radical transformation into SLOMO, trading his lab coat for a pair of rollerblades and his IRA for a taste of divinity.</p><br>
+    </div>
 
-    THE FILMMAKERS ARE GRATEFUL TO<br>
-    John Kitchin<br>
-    Dominick Addario<br>
-    Brenda West-Newman<br>
-    Dr. Leslie Preger<br>
-    Maris Curran<br>
-    the Izenberg family<br>
-    <br>
-    EXECUTIVE PRODUCER<br>
-    Neil Izenberg<br>
-    <br>
-    CO-PRODUCER<br>
-    Wynn Padula<br>
-    <br>
-    ADDITIONAL CAMERA<br>
-    Michael Sly and John Jenkins<br>
-    <br>
-    ANIMATION<br>
-    Alligator Planet, LLC<br>
-    Animator: Eli Noyes<br>
-    Producer: Ralph Guggenheim<br>
-    <br>
-    SOUND DESIGN & MIX<br>
-    Jeremiah Moore<br>
-    <br>
-    DIALOGUE EDITOR<br>
-    Max Hirtenstein<br>
-    <br>
-    COLOR CORRECTION<br>
-    Robert Arnold<br>
-    <br>
-    PRODUCTION ASSISTANT<br>
-    Sophie Fried<br>
-    <br>
-    SPECIAL THANKS<br>
-    Steve Agnos<br>
-    Josh Anand<br>
-    Chris Barngrover<br>
-    Sarah Bertram<br>
-    Owen Bissell<br>
-    Meryl Marshall-Daniels<br>
-    Bubba Dialhouse<br>
-    Andrzej Dolata<br>
-    Henry Dombey<br>
-    Claudia Fieger<br>
-    Sally Foster<br>
-    Roger and Cheri Friedman<br>
-    Todd Gudat<br>
-    Dante harper<br>
-    Mark Hassett<br>
-    Rachel Jacobs<br>
-    Alexis Johansen-williams<br>
-    Ruby Ku<br>
-    Corine Masri<br>
-    Greg Matthews<br>
-    Sarah Nelson<br>
-    Fred Padula<br>
-    Alex Pappas<br>
-    Vincent Paratore<br>
-    David Roth<br>
-    Russell Ramo<br>
-    Sally Sanfield<br>
-    Eric Shank<br>
-    The Sievings<br>
-    The Sloans<br>
-    Scott Stillman<br>
-    Carey Tanner<br>
-    Adi Tzur<br>
-    Daniel Versman<br>
-    Meredith Whipple<br>
-    Jack Wickert<br>
-    Jude Wilson<br>
-    Alisa Wittkop<br>
-    <br>
-    KU TAND0<br>
-    Written and Performed by Bonga<br>
-    Courtesy of Lusafrica Records<br>
-    By Arrangement with François Post<br>
-    <br>
-    <br>
-    <h4>CONTACT US</h4>
-    Josh Izenberg: Director/Publicity<br>
-    Big Young Films<br>
-    711 Hampshire<br>
-    San Francisco, CA<br>
-    94110<br>
-    <br>
-    (734) 904-1857<br>
-    joshuaizenberg@gmail.com<br>
-    www.bigyoungfilms.com<br>
-    <br>
-    <h4>PRESS</h4>
-    NONE YET
+    <div id="bios" style="display:none">
+      <p><strong>Josh Izenberg: Director/Producer</strong></p>
+      <p>Josh hails from Ann Arbor, where he earned a degree in Screenwriting from the University of Michigan. He's since worked as a copywriter, a cab driver, and a carpenter. SLOMO is his first documentary.</p>
+      <br>
+      <p><strong>Amanda Micheli: Producer</strong></p>
+      <p>Amanda is an Oscar-nominated filmmaker and a celebrated cinematographer. Her first film, JUST FOR THE RIDE, won a student Oscar and IDA Award. DOUBLE DARE, which followed the struggles of two Hollywood stuntwomen, premiered at Toronto and was an audience favorite at festivals worldwide. LA CORONA premiered at Sundance and won an Oscar nod before airing on HBO, and is currently in development for adaptation into a fiction feature. Most recently, she directed THE SAVE for ESPN and ONE NATION UNDER DOG for HBO. Her other credits include THIN, CAT DANCERS, “30 Days,” and MY FLESH AND BLOOD.</p>
+      <br>
+      <p><strong>Traci Loth: Editor</strong></p>
+      <p>Traci is a San Francisco-based editor with over a decade of experience in documentary and commercial work for television and film. She cut the award-winning documentary Row Hard, No Excuses. Her corporate clients include Apple, Nike, Yahoo!, and Adobe. Most recently, she was editor for Aerial America (Smithsonian Channel) and One Nation Under Dog (HBO). Currently she is cutting a 60-min feature for ESPN's Nine for IX series.</p>
+      <br>
+      <p><strong>Wynn Padula: Cinematographer/Co-Producer</strong></p>
+      <p>Wynn received his M.F.A. in both Directing and Cinematography from the UCLA School of Theater, Film and Television in 2007, where he had the opportunity to learn from some of the world's top cinematographers including Roger Deakins and Janusz Kaminski. Wynn has since produced and shot many festival-winning films including "The Breeze Team" (2nd Place winner, Canadian International Film Festival), "Rainbow Klansmen" (Mill Valley Film Festival), "Felicia's House" and "Lynx" (Best Short Film, Wild & Scenic Film Festival). Before becoming a professional director of photography, Wynn worked in development under the legendary producer Roger Corman.</p>
+      <br>
+      <p><strong>Nate Sloan: original music</strong></p>
+      <p>Nate studies musicology at Stanford University, teaches jazz history at the Berkeley Jazz Institute, and performs as one-half of the freak-folk duo Sly Boots. He has also written music and lyrics for two musicals, Leavittsburg, OH (2009, Brown University) and Baz and Me (2010, Playwrights' Rep). Slomo is his first film score.</p>
+      <br>
+      <p><strong>Nick Gage: original music</strong></p>
+      <p>Nick is a Chicago based Songwriter/multi-instrumentalist. Many of his songs have appeared on NPR through local affiliate WBEZ. 2012 brought about his debut musical "Holy Musical B@man!" with Team StarKid. He is currently music directing at Second City.</p>
+    </div>
+
+    <div id="credits" style="display:none">
+      EXECUTIVE PRODUCER<br>
+      Neil Izenberg<br>
+      <br>
+      CO-PRODUCER<br>
+      Wynn Padula<br>
+      <br><br>
+      THE FILMMAKERS ARE GRATEFUL TO<br>
+      John Kitchin<br>
+      Dominick Addario<br>
+      Brenda West-Newman<br>
+      Dr. Leslie Preger<br>
+      Maris Curran<br>
+      the Izenberg family<br>
+      <br>
+      ADDITIONAL CAMERA<br>
+      Michael Sly and John Jenkins<br>
+      <br>
+      ANIMATION<br>
+      Alligator Planet, LLC<br>
+      Animator: Eli Noyes<br>
+      Producer: Ralph Guggenheim<br>
+      <br>
+      SOUND DESIGN & MIX<br>
+      Jeremiah Moore<br>
+      <br>
+      DIALOGUE EDITOR<br>
+      Max Hirtenstein<br>
+      <br>
+      COLOR CORRECTION<br>
+      Robert Arnold<br>
+      <br>
+      PRODUCTION ASSISTANT<br>
+      Sophie Fried<br>
+      <br>
+      SPECIAL THANKS<br>
+      Steve Agnos<br>
+      Josh Anand<br>
+      Chris Barngrover<br>
+      Sarah Bertram<br>
+      Owen Bissell<br>
+      Meryl Marshall-Daniels<br>
+      Bubba Dialhouse<br>
+      Andrzej Dolata<br>
+      Henry Dombey<br>
+      Claudia Fieger<br>
+      Sally Foster<br>
+      Roger and Cheri Friedman<br>
+      Todd Gudat<br>
+      Dante harper<br>
+      Mark Hassett<br>
+      Rachel Jacobs<br>
+      Alexis Johansen-williams<br>
+      Ruby Ku<br>
+      Corine Masri<br>
+      Greg Matthews<br>
+      Sarah Nelson<br>
+      Fred Padula<br>
+      Alex Pappas<br>
+      Vincent Paratore<br>
+      David Roth<br>
+      Russell Ramo<br>
+      Sally Sanfield<br>
+      Eric Shank<br>
+      The Sievings<br>
+      The Sloans<br>
+      Scott Stillman<br>
+      Carey Tanner<br>
+      Adi Tzur<br>
+      Daniel Versman<br>
+      Meredith Whipple<br>
+      Jack Wickert<br>
+      Jude Wilson<br>
+      Alisa Wittkop<br>
+      <br>
+      KU TAND0<br>
+      Written and Performed by Bonga<br>
+      Courtesy of Lusafrica Records<br>
+      By Arrangement with François Post<br>
+      <br>
+      <br>
+    </div>
+
+    <div id="contact" style="display:none">
+
+      Josh Izenberg: Director/Publicity<br>
+      Big Young Films<br>
+      711 Hampshire<br>
+      San Francisco, CA<br>
+      94110<br>
+      <br>
+      (734) 904-1857<br>
+      joshuaizenberg@gmail.com<br>
+      www.bigyoungfilms.com<br>
+      <br>
+    </div>
+
+    <div id="press" style="display:none">
+
+      NONE YET
+    </div>
   </div>
 </div>
 
 <div id="trailer" class="modal hide">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel"><%= image_tag 'menu-about.png' %></h3>
-  </div>
   <div class="modal-body">
     <center>
-      <iframe width="480" height="360" src="http://www.kickstarter.com/projects/938605972/i-slomo/widget/video.html" frameborder="0"> </iframe>
+      <iframe src="http://player.vimeo.com/video/60300145?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff&amp;autoplay=1" width="480" height="270" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
     </center>
   </div>
 </div>
-
-
 
 
 <%= content_for :js do %>
@@ -196,6 +220,52 @@
       $("#trailer").modal('show');
       return false;
     });
+
+    $("#synopsis-link").on('click', function() {
+      $("#synopsis").show();
+      $("#bios").hide();
+      $("#credits").hide();
+      $("#contact").hide();
+      $("#press").hide();
+      return false;
+    })
+
+    $("#bios-link").on('click', function() {
+      $("#synopsis").hide();
+      $("#bios").show();
+      $("#credits").hide();
+      $("#contact").hide();
+      $("#press").hide();
+      return false;
+    })
+
+    $("#credits-link").on('click', function() {
+      $("#synopsis").hide();
+      $("#bios").hide();
+      $("#credits").show();
+      $("#contact").hide();
+      $("#press").hide();
+      return false;
+    })
+
+    $("#contact-link").on('click', function() {
+      $("#synopsis").hide();
+      $("#bios").hide();
+      $("#credits").hide();
+      $("#contact").show();
+      $("#press").hide();
+      return false;
+    })
+
+    $("#press-link").on('click', function() {
+      $("#synopsis").hide();
+      $("#bios").hide();
+      $("#credits").hide();
+      $("#contact").hide();
+      $("#press").show();
+      return false;
+    })
+
   </script>
 <% end %>
 
