@@ -7,13 +7,19 @@
   .hero-image {
     background-image: url(<%= asset_path 'hero.jpg' %>);
     height: 658px;
-    margin-top: -250px
+    margin-top: -570px;
   }
 
   .menu{
     margin-left: 200px;
     z-index: 1000;
     margin-top: 50px;
+  }
+
+  .social-media{
+    margin-left: 200px;
+    z-index: 1000;
+    margin-top: 250px;
   }
 
   .modal{
@@ -30,6 +36,13 @@
     float: left;
   }
 
+  #mc_embed_signup{
+    background:none;
+    clear:left;
+    font:14px Helvetica,Arial,sans-serif;
+    margin-left: -15px;
+  }
+
 </style>
 
 
@@ -37,15 +50,23 @@
   <%= link_to (image_tag 'menu-slomo.png', :style => "margin-bottom: 30px"), root_path %><br>
   <%= link_to (image_tag 'menu-trailer.png', :style => "margin-bottom: 10px"), '#trailer', 'data-toggle' => 'modal', :id => "trailer-link" %><%= link_to (image_tag 'icon-video.png', :style => "margin-top: -10px; margin-left: 10px"), '#trailer', 'data-toggle' => 'modal', :id => "trailer-link2" %>
   <br>
-  <%= link_to (image_tag 'menu-about.png', :style => "margin-bottom: 10px"), '#about', "data-toggle" => "modal", :id => "modal-link" %><br>
-  <%= link_to (image_tag 'menu-contact.png', :style => "margin-bottom: 10px"), "mailto:joshuaizenberg@gmail.com" %><br>
+  <%= link_to (image_tag 'menu-about.png', :style => "margin-bottom: 10px"), '#about', "data-toggle" => "modal", :id => "about-link" %><br>
+  <%= link_to (image_tag 'menu-contact.png', :style => "margin-bottom: 10px"), '#contact', "data-toggle" => "modal", :id => "contact-link" %><br>
+</div>
+
+
+<div class="social-media">
+  <%= link_to (image_tag 'FacebookSquare.png', :style => "margin-right: 5px;", :size => "50x50"), "https://www.facebook.com/SLOMOtheMovie", :target => "_blank" %>
+  <%= link_to (image_tag 'TwitterSquare.png', :style => "margin-right: 5px", :size => "50x50"), "https://twitter.com/slomo", :target => "_blank" %>
+  <%= link_to (image_tag 'InstagramSquare.png', :style => "margin-right: 5px", :size => "50x50"), "http://instagram.com/bigyoungfilms", :target => "_blank" %>
 </div>
 
 <div class="hero-image"></div>
 
+
 <div class="row-fluid" style="margin: 30px 0; width: 600;">
 <center>
-  <%= link_to (image_tag 'award-bigsky.jpg', :style => "margin-right: 40px; margin-left: -38px"), "http://www.bigskyfilmfest.org/", :target => "_blank" %>
+  <%= link_to (image_tag 'award-bigsky.jpg', :style => "margin-right: 27px; margin-left: -38px"), "http://www.bigskyfilmfest.org/", :target => "_blank" %>
   <%= link_to (image_tag 'award-sxsw.jpg', :size => "170x150", :style => "margin-right: 33px; margin-left: 30px, margin-top: -30px"), "http://sxsw.com/film", :target => "_blank" %>
   <%= link_to (image_tag 'award-truefalse.jpg', :size => "150x75"), "http://truefalse.org/", :target => "_blank" %>
 
@@ -65,8 +86,8 @@
       <a href="#" id="synopsis-link"><div class="about-tab">Synopsis</div></a>
       <a href="#" id="bios-link"><div class="about-tab">Filmmaker Bios</div></a>
       <a href="#" id="credits-link"><div class="about-tab">Full Credits</div></a>
-      <a href="#" id="contact-link"><div class="about-tab">Contact us</div></a>
       <a href="#" id="press-link"><div class="about-tab">Press</div></a>
+      <a href="#" id="links-link"><div class="about-tab">Links</div></a>
     </div>
 
     <div id="synopsis">
@@ -192,23 +213,54 @@
       <br>
     </div>
 
-    <div id="contact" style="display:none">
-
-      Josh Izenberg: Director/Publicity<br>
-      Big Young Films<br>
-      711 Hampshire<br>
-      San Francisco, CA<br>
-      94110<br>
-      <br>
-      (734) 904-1857<br>
-      joshuaizenberg@gmail.com<br>
-      www.bigyoungfilms.com<br>
-      <br>
-    </div>
-
     <div id="press" style="display:none">
-
+      <p><strong>Slomo Wins Best Short Doc at Big Sky Film Festival:</strong></p>
+      <p><a href="http://www.abcfoxmontana.com/news/local/Winners-Announced-for-Film-Festival-192597851.html">http://www.abcfoxmontana.com/news/local/Winners-Announced-for-Film-Festival-192597851.html</a></p>
+      <br>
+      <p><strong>Monata Kaimin review:</strong></p>
+      <p><a href="http://www.montanakaimin.com/arts_and_culture/article_0b9a8e04-773f-11e2-863c-001a4bcf6878.html">http://www.montanakaimin.com/arts_and_culture/article_0b9a8e04-773f-11e2-863c-001a4bcf6878.html</a></p>
     </div>
+
+    <div id="links" style="display:none">
+      <p><a href="http://bigyoungfilms.tumblr.com">http://bigyoungfilms.tumblr.com</a></p>
+      <p><a href="http://www.runawayfilms.com">http://www.runawayfilms.com</a></p>
+      <p><a href="http://iamslomo.com">http://iamslomo.com</a></p>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="contact" class="modal hide">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel"><%= image_tag 'menu-contact.png' %></h3>
+  </div>
+  <div class="modal-body">
+
+  <p><strong>Join our mailing list:</strong></p>
+  <!-- Begin MailChimp Signup Form -->
+  <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+
+  <div id="mc_embed_signup">
+  <form action="http://runawayfilms.us2.list-manage.com/subscribe/post?u=819ea68d0478771fdc0cd51c0&amp;id=b2cfa1e676" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+  </form>
+  </div>
+  <!--End mc_embed_signup-->
+  <hr>
+
+    Josh Izenberg: Director/Publicity<br>
+    Big Young Films<br>
+    711 Hampshire<br>
+    San Francisco, CA<br>
+    94110<br>
+    <br>
+    (734) 904-1857<br>
+    joshuaizenberg@gmail.com<br>
+    www.bigyoungfilms.com<br>
+
   </div>
 </div>
 
@@ -221,10 +273,16 @@
 </div>
 
 
+
+
 <%= content_for :js do %>
   <script type="text/javascript">
-    $("#modal-link").on('click', function() {
+    $("#about-link").on('click', function() {
       $("#about").modal('show');
+      return false;
+    });
+    $("#contact-link").on('click', function() {
+      $("#contact").modal('show');
       return false;
     });
     $("#trailer-link").on('click', function() {
@@ -242,6 +300,7 @@
       $("#credits").hide();
       $("#contact").hide();
       $("#press").hide();
+      $("#links").hide();
       return false;
     })
 
@@ -251,6 +310,7 @@
       $("#credits").hide();
       $("#contact").hide();
       $("#press").hide();
+      $("#links").hide();
       return false;
     })
 
@@ -260,15 +320,7 @@
       $("#credits").show();
       $("#contact").hide();
       $("#press").hide();
-      return false;
-    })
-
-    $("#contact-link").on('click', function() {
-      $("#synopsis").hide();
-      $("#bios").hide();
-      $("#credits").hide();
-      $("#contact").show();
-      $("#press").hide();
+      $("#links").hide();
       return false;
     })
 
@@ -278,6 +330,17 @@
       $("#credits").hide();
       $("#contact").hide();
       $("#press").show();
+      $("#links").hide();
+      return false;
+    })
+
+    $("#links-link").on('click', function() {
+      $("#synopsis").hide();
+      $("#bios").hide();
+      $("#credits").hide();
+      $("#contact").hide();
+      $("#press").hide();
+      $("#links").show();
       return false;
     })
 
