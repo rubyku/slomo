@@ -1,5 +1,11 @@
 Slomo::Application.routes.draw do
 
+  resources :links
+
+
+  resources :presses
+
+
   root :to => "home#index"
 
   # The priority is based upon order of creation:

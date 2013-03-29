@@ -214,17 +214,16 @@
     </div>
 
     <div id="press" style="display:none">
-      <p><strong>Slomo Wins Best Short Doc at Big Sky Film Festival:</strong></p>
-      <p><a href="http://www.abcfoxmontana.com/news/local/Winners-Announced-for-Film-Festival-192597851.html">http://www.abcfoxmontana.com/news/local/Winners-Announced-for-Film-Festival-192597851.html</a></p>
-      <br>
-      <p><strong>Monata Kaimin review:</strong></p>
-      <p><a href="http://www.montanakaimin.com/arts_and_culture/article_0b9a8e04-773f-11e2-863c-001a4bcf6878.html">http://www.montanakaimin.com/arts_and_culture/article_0b9a8e04-773f-11e2-863c-001a4bcf6878.html</a></p>
+      <% @presses.each do |press| %>
+        <p><strong><%= press.title %></strong></p>
+        <p><%= link_to press.link, press.link, :target => "_blank"  %></p>
+      <% end %>
     </div>
 
     <div id="links" style="display:none">
-      <p><a href="http://bigyoungfilms.tumblr.com">http://bigyoungfilms.tumblr.com</a></p>
-      <p><a href="http://www.runawayfilms.com">http://www.runawayfilms.com</a></p>
-      <p><a href="http://iamslomo.com">http://iamslomo.com</a></p>
+      <% @links.each do |link| %>
+        <p><%= link_to link.link, link.link, :target => "_blank" %></p>
+      <% end %>
     </div>
 
   </div>
