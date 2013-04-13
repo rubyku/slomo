@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @screening.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @screening.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_screening_path(@screening) %> |
+<%= link_to 'Back', screenings_path %>

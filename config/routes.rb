@@ -1,5 +1,8 @@
 Slomo::Application.routes.draw do
 
+  resources :screenings
+
+
   resources :links
 
 
