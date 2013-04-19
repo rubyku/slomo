@@ -1,3 +1,3 @@
 class Screening < ActiveRecord::Base
-  attr_accessible :description, :title
+  attr_accessible :city, :date, :name
 end

@@ -18,7 +18,7 @@ class ScreeningsControllerTest < ActionController::TestCase
 
   test "should create screening" do
     assert_difference('Screening.count') do
-      post :create, screening: { description: @screening.description, title: @screening.title }
+      post :create, screening: { city: @screening.city, date: @screening.date, name: @screening.name }
     end
 
     assert_redirected_to screening_path(assigns(:screening))
@@ -35,7 +35,7 @@ class ScreeningsControllerTest < ActionController::TestCase
   end
 
   test "should update screening" do
-    put :update, id: @screening, screening: { description: @screening.description, title: @screening.title }
+    put :update, id: @screening, screening: { city: @screening.city, date: @screening.date, name: @screening.name }
     assert_redirected_to screening_path(assigns(:screening))
   end
 

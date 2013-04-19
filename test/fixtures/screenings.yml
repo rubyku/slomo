@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
-  description: MyText
+  date: MyString
+  name: MyString
+  city: MyString
 
 two:
-  title: MyString
-  description: MyText
+  date: MyString
+  name: MyString
+  city: MyString

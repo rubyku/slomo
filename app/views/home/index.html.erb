@@ -7,13 +7,12 @@
   .hero-image {
     background-image: url(<%= asset_path 'hero.jpg' %>);
     height: 658px;
-    margin-top: -270px;
+    margin-top: -305px;
   }
 
   .menu{
     margin-left: 200px;
     z-index: 1000;
-    margin-top: 50px;
   }
 
   .modal{
@@ -45,6 +44,7 @@
   <%= link_to (image_tag 'menu-trailer.png', :style => "margin-bottom: 10px"), '#trailer', 'data-toggle' => 'modal', :id => "trailer-link" %><%= link_to (image_tag 'icon-video.png', :style => "margin-top: -10px; margin-left: 10px"), '#trailer', 'data-toggle' => 'modal', :id => "trailer-link2" %>
   <br>
   <%= link_to (image_tag 'menu-about.png', :style => "margin-bottom: 10px"), '#about', "data-toggle" => "modal", :id => "about-link" %><br>
+  <%= link_to (image_tag 'menu-screenings.png', :style => "margin-bottom: 10px"), '#screenings', "data-toggle" => "modal", :id => "screenings-link" %><br>
   <%= link_to (image_tag 'menu-contact.png', :style => "margin-bottom: 10px"), '#contact', "data-toggle" => "modal", :id => "contact-link" %><br>
 </div>
 
@@ -265,6 +265,22 @@
   </div>
 </div>
 
+<div id="screenings" class="modal hide">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel"><%= image_tag 'menu-screenings.png' %></h3>
+  </div>
+  <div class="modal-body">
+
+      <% @screenings.each do |screening| %>
+        <p style="margin-bottom: 20px"><%= screening.date %><br>
+        <strong><%= screening.name %></strong><br>
+        <%= screening.city %></p>
+      <% end %>
+
+  </div>
+</div>
+
 
 
 
@@ -284,6 +300,10 @@
     });
     $("#trailer-link2").on('click', function() {
       $("#trailer").modal('show');
+      return false;
+    });
+    $("#screenings-link").on('click', function() {
+      $("#screenings").modal('show');
       return false;
     });
 

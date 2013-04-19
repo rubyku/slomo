@@ -2,8 +2,9 @@
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Description</th>
+    <th>Date</th>
+    <th>Name</th>
+    <th>City</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,8 +12,9 @@
 
 <% @screenings.each do |screening| %>
   <tr>
-    <td><%= screening.title %></td>
-    <td><%= screening.description %></td>
+    <td><%= screening.date %></td>
+    <td><%= screening.name %></td>
+    <td><%= screening.city %></td>
     <td><%= link_to 'Show', screening %></td>
     <td><%= link_to 'Edit', edit_screening_path(screening) %></td>
     <td><%= link_to 'Destroy', screening, method: :delete, data: { confirm: 'Are you sure?' } %></td>
