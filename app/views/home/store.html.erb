@@ -1,0 +1,98 @@
+<style type="text/css">
+  body {
+    background-color: black;
+    font-family: helvetica;
+    color: white;
+  }
+</style>
+
+<div class="container_16">
+
+  <h2 style="margin-bottom: 30px">Slomo store</h2>
+
+  <div class="row-fluid" style="margin-bottom: 20px">
+    <div class="span4">
+      <%= image_tag 'store/mens_black_tee_front.jpg', :style => "width: 300px; margin-bottom: 20px" %>
+      <p>Men's Black Tee - M, L, XL, XXL - $25</p>
+      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="CLLXGTKFPU576">
+      <table>
+      <tr><td><input type="hidden" name="on0" value="Sizes">Sizes</td></tr><tr><td><select name="os0">
+        <option value="M">M </option>
+        <option value="L">L </option>
+        <option value="XL">XL </option>
+        <option value="XXL">XXL </option>
+      </select> </td></tr>
+      </table>
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+    </div>
+    <div class="span4">
+      <%= image_tag 'store/mens_blue_tee_back.jpg', :style => "width: 300px; margin-bottom: 20px" %>
+      <p>Men's Blue Tee - M, L, XL, XXL - $25</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+      ">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+    </div>
+    <div class="span4">
+      <%= image_tag 'store/womens_blue_tee_front.jpg', :style => "width: 300px; margin-bottom: 20px" %>
+      <p>Women's Blue Tee - S, M, L, XL - $25</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+      ">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+    </div>
+  </div>
+
+  <div class="row-fluid" style="margin-bottom: 20px">
+    <div class="span4">
+      <%= image_tag 'store/womens_blue_tank_back.jpg', :style => "width: 300px; margin-bottom: 20px" %>
+      <p>Women's Blue Tank - S, M, L, XL - $20</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHuQYJKoZIhvcNAQcEoIIHqjCCB6YCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYBTCVesV8jQ5l6q+RD96K220Zu7lc+TcCh8BYD6lie43Rytsm8uppsd3f5JqPXHAUCf//bz2KEUQKAMCzcfV8zvpW1tM7UKP0Mdbf9XxxMiEODKcbe9xiy8jp/FfOU3CrzxTV9GxI3dLt/Ii2MQvFXrH3SjWKpSzuU3Xp3IrAFLdjELMAkGBSsOAwIaBQAwggE1BgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECK29hUGSQYUjgIIBEJHyC4tEqqMdZ3OBwWM4/GAwg+cgraggj0ezGaVQfZxVh11K3evcKnPBhCJ83cSjl1Po4G9uvewyfG74yHWS+3wSzJQ3yAX0iaReK1DwUojZXOSRUi7EGtDA2Iokye+sHoEN/XqTxIHQajWdJFQIod/nzxJ3V4RfvdOjmb0Aih4u0ymNmzIUXDupx+SiDzGxYkW05gXz4A8gN9IEc72Y9DYEIuAubJ120eSWUUgyuZRKIZkInoYOoN5iq0MY5pv77itWJ0T2hEQhb9N17wkFPnKn4sMuhvPHMctv+ZVLQsW5YlmF8YoAXiqBmh+EzC2eCqJiAa+7EFzeJ+L1NK3tWrdULLrMEcwoxHhWg/2HCWORoIIDhzCCA4MwggLsoAMCAQICAQAwDQYJKoZIhvcNAQEFBQAwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMB4XDTA0MDIxMzEwMTMxNVoXDTM1MDIxMzEwMTMxNVowgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBR07d/ETMS1ycjtkpkvjXZe9k+6CieLuLsPumsJ7QC1odNz3sJiCbs2wC0nLE0uLGaEtXynIgRqIddYCHx88pb5HTXv4SZeuv0Rqq4+axW9PLAAATU8w04qqjaSXgbGLP3NmohqM6bV9kZZwZLR/klDaQGo1u9uDb9lr4Yn+rBQIDAQABo4HuMIHrMB0GA1UdDgQWBBSWn3y7xm8XvVk/UtcKG+wQ1mSUazCBuwYDVR0jBIGzMIGwgBSWn3y7xm8XvVk/UtcKG+wQ1mSUa6GBlKSBkTCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb22CAQAwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOBgQCBXzpWmoBa5e9fo6ujionW1hUhPkOBakTr3YCDjbYfvJEiv/2P+IobhOGJr85+XHhN0v4gUkEDI8r2/rNk1m0GA8HKddvTjyGw/XqXa+LSTlDYkqI8OwR8GEYj4efEtcRpRYBxV8KxAW93YDWzFGvruKnnLbDAF6VR5w/cCMn5hzGCAZowggGWAgEBMIGUMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbQIBADAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTMwNjE3MTU0OTE2WjAjBgkqhkiG9w0BCQQxFgQUY1zls3uakUYF5rbq3XRdbwRrfJYwDQYJKoZIhvcNAQEBBQAEgYCL0ok+vT1zRjIIZYZ58KxzZ3bYNA9I39IxPBG6FetCub30C2n5RxzEYmFDahe0Ki+W1/BkyKsEW4xraLNfwsozHsu0lFiBjfE0zc/wZKLCrVILPaY3WoS2RDA7Mplon7O5qrbysQjjzrNa2zoSNvtzD638T9Jp8sWCe6197RBoGg==-----END PKCS7-----
+      ">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+    </div>
+    <div class="span4">
+      <%= image_tag 'store/bumper_sticker.jpg', :style => "width: 300px; margin-bottom: 20px" %>
+      <p>Bumper Sticker - $3</p>
+      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="N38BKDL8SCD6L">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+    </div>
+    <div class="span4">
+      <%= image_tag 'store/sticker.png', :style => "width: 125px; margin-bottom: 20px" %>
+      <p>Sticker - $2</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+      ">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4">
+      <%= image_tag 'store/dvd_cover.jpg', :style => "width: 300px; margin-bottom: 20px" %>
+      <p>Coming soon</p>
+    </div>
+  </div>
+
+</div>

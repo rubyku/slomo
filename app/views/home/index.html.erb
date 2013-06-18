@@ -7,7 +7,7 @@
   .hero-image {
     background-image: url(<%= asset_path 'hero.jpg' %>);
     height: 658px;
-    margin-top: -310px;
+    margin-top: -320px;
   }
 
   .menu{
@@ -45,11 +45,10 @@
   <br>
   <%= link_to (image_tag 'menu-about.png', :style => "margin-bottom: 10px"), '#about', "data-toggle" => "modal", :id => "about-link" %><br>
   <%= link_to (image_tag 'menu-screenings.png', :style => "margin-bottom: 10px"), '#screenings', "data-toggle" => "modal", :id => "screenings-link" %><br>
-  <%= link_to (image_tag 'menu-contact.png', :style => "margin-bottom: 10px"), '#contact', "data-toggle" => "modal", :id => "contact-link" %><br>
+  <%= link_to (image_tag 'menu-store.png', :style => "margin-bottom: 10px"), 'http://slomo.storeenvy.com', :target => "_blank" %><br>
 </div>
 
 <div class="hero-image"></div>
-
 
 <div class="row-fluid" style="margin: 30px 0; width: 600;">
 <center>
@@ -58,13 +57,13 @@
     <%= link_to (image_tag 'award-sxsw-official.png', :size => "170x150", :style => "margin-right: 33px; margin-left: 10px;"), "http://sxsw.com/film", :target => "_blank" %>
     <%= link_to (image_tag 'award-truefalse.jpg', :size => "150x75"), "http://truefalse.org/", :target => "_blank" %>
   </p>
-  <p>
+  <p style="margin-bottom: 40px">
     <%= link_to (image_tag 'FacebookSquare.png', :style => "margin-right: 5px;", :size => "50x50"), "https://www.facebook.com/SLOMOtheMovie", :target => "_blank" %>
     <%= link_to (image_tag 'TwitterSquare.png', :style => "margin-right: 5px", :size => "50x50"), "https://twitter.com/slomo", :target => "_blank" %>
     <%= link_to (image_tag 'InstagramSquare.png', :style => "margin-right: 5px", :size => "50x50"), "http://instagram.com/bigyoungfilms", :target => "_blank" %>
   </p>
-
-  <p style="margin-top: 60px">Copyright 2013<br>
+  <%= link_to "Contact us", '#contact', "data-toggle" => "modal", :id => "contact-link", :style => "color: white; text-decoration: underline" %>
+  <p style="margin-top: 40px;">Copyright 2013<br>
   All Rights Reserved</p>
 </center>
 </div>

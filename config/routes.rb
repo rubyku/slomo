@@ -1,15 +1,13 @@
 Slomo::Application.routes.draw do
 
   resources :screenings
-
-
   resources :links
-
-
   resources :presses
 
+  match '/store'                     => 'home#store'
 
   root :to => "home#index"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
