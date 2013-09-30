@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
   def index
-    @presses = Press.all
-    @links = Link.all
-    @screenings = Screening.all
+    @presses = Press.all.reverse
+    @links = Link.all.reverse
+    @screenings = Screening.all.reverse
   end
 
   def store

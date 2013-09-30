@@ -2,7 +2,7 @@ class PressesController < ApplicationController
   # GET /presses
   # GET /presses.json
   def index
-    @presses = Press.all
+    @presses = Press.all.reverse
 
     respond_to do |format|
       format.html # index.html.erb

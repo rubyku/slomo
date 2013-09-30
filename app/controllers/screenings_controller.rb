@@ -2,7 +2,7 @@ class ScreeningsController < ApplicationController
   # GET /screenings
   # GET /screenings.json
   def index
-    @screenings = Screening.all
+    @screenings = Screening.all.reverse
 
     respond_to do |format|
       format.html # index.html.erb
