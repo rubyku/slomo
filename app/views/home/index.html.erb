@@ -215,8 +215,8 @@
 
     <div id="honors" style="display:none">
       <% @honors.each do |honor| %>
-        <p><strong><%= link_to honor.festival, honor.festival, :target => "_blank"  %></strong></p>
-        <p><%= honor.festival %></p>
+        <p><strong><%= honor.festival %></strong></p>
+        <p><%= honor.award %></p>
       <% end %>
     </div>
 
