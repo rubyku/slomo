@@ -2,7 +2,7 @@ class HonorsController < ApplicationController
   # GET /honors
   # GET /honors.json
   def index
-    @honors = Honor.all.reverse
+    @honors = Honor.all
 
     respond_to do |format|
       format.html # index.html.erb
