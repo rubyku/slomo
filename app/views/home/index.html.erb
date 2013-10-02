@@ -215,8 +215,7 @@
 
     <div id="honors" style="display:none">
       <% @honors.each do |honor| %>
-        <p><strong><%= honor.festival %></strong></p>
-        <p><%= honor.award %></p>
+        <p><strong><%= honor.festival %></strong> - <%= honor.award %></p>
       <% end %>
     </div>
 
