@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Festival:</b>
+  <%= @honor.festival %>
+</p>
+
+<p>
+  <b>Award:</b>
+  <%= @honor.award %>
+</p>
+
+
+<%= link_to 'Edit', edit_honor_path(@honor) %> |
+<%= link_to 'Back', honors_path %>

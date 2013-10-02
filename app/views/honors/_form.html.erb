@@ -1,0 +1,32 @@
+<style type="text/css">
+  body{
+    color: white;
+    font-family: helvetica;
+  }
+</style>
+
+<%= form_for(@honor) do |f| %>
+  <% if @honor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@honor.errors.count, "error") %> prohibited this honor from being saved:</h2>
+
+      <ul>
+      <% @honor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :festival %><br />
+    <%= f.text_field :festival %>
+  </div>
+  <div class="field">
+    <%= f.label :award %><br />
+    <%= f.text_field :award %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

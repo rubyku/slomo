@@ -1,0 +1,25 @@
+<h1>Listing honors</h1>
+
+<table>
+  <tr>
+    <th>Festival</th>
+    <th>Award</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @honors.each do |honor| %>
+  <tr>
+    <td><%= honor.festival %></td>
+    <td><%= honor.award %></td>
+    <td><%= link_to 'Show', honor %></td>
+    <td><%= link_to 'Edit', edit_honor_path(honor) %></td>
+    <td><%= link_to 'Destroy', honor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Honor', new_honor_path %>
