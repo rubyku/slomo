@@ -7,12 +7,19 @@
   .hero-image {
     background-image: url(<%= asset_path 'hero.jpg' %>);
     height: 658px;
-    margin-top: -320px;
+    margin-top: -640px;
   }
 
   .menu{
     margin-left: 200px;
     z-index: 1000;
+  }
+
+
+  .social-media{
+    margin-left: 200px;
+    z-index: 1000;
+    margin-top: 240px;
   }
 
   .modal{
@@ -48,9 +55,17 @@
   <%= link_to (image_tag 'menu-store.png', :style => "margin-bottom: 10px"), 'http://slomo.storeenvy.com', :target => "_blank" %><br>
 </div>
 
+<div class="social-media">
+  <p style="margin-bottom: 40px">
+    <%= link_to (image_tag 'icon-facebook.png', :style => "margin-right: 5px; background-color: #3B5998"), "https://www.facebook.com/SLOMOtheMovie", :target => "_blank" %>
+    <%= link_to (image_tag 'icon-twitter.png', :style => "margin-right: 5px; background-color: #00ACED"), "https://twitter.com/slomo", :target => "_blank" %>
+    <%= link_to (image_tag 'icon-email.png', :style => "margin-right: 5px; background-color: #DD4B39"), '#contact', "data-toggle" => "modal", :id => "contact-link" %>
+  </p>
+</div>
+
 <div class="hero-image"></div>
 
-<div class="row-fluid" style="margin: 30px 0; width: 600;">
+<div class="row-fluid" style="width: 600; margin-bottom: 30px">
 <center>
   <p>
     <%= image_tag 'award-bigsky.jpg', :style => "margin-right: 0px; margin-left: -30px" %>
@@ -60,11 +75,6 @@
     <%= image_tag 'award-boston.png', :size => "200x100" %>
     <%= image_tag 'award-sheffield.jpg', :size => "200x75" %>
   </p>
-  <p style="margin-bottom: 40px">
-    <%= link_to (image_tag 'FacebookSquare.png', :style => "margin-right: 5px;", :size => "50x50"), "https://www.facebook.com/SLOMOtheMovie", :target => "_blank" %>
-    <%= link_to (image_tag 'TwitterSquare.png', :style => "margin-right: 5px", :size => "50x50"), "https://twitter.com/slomo", :target => "_blank" %>
-  </p>
-  <%= link_to "Contact us", '#contact', "data-toggle" => "modal", :id => "contact-link", :style => "color: white; text-decoration: underline" %>
   <p style="margin-top: 40px;">Copyright 2013<br>
   All Rights Reserved</p>
 </center>
